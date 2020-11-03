@@ -4,8 +4,11 @@
 
 # cute_cat.jpg
 
-#*abc*
+*abc*
 
-#_joo_
+_joo_
 
+__bold__
+
+_italic_
 
