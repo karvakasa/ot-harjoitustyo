@@ -3,5 +3,6 @@
 ##Tehtävät
 
 #Viikko 1
-http://github.com - automatic!
-[Github](http://github.com)
+[gitlog.txt](https://github.com/karvakasa/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
+[komentorivi.txt](https://github.com/karvakasa/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
+
