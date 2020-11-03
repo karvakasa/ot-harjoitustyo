@@ -4,8 +4,8 @@
 
 # cute_cat.jpg
 
-*abc*
+#*abc*
 
-_joo_
+#_joo_
 
 
