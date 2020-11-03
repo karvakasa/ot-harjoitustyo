@@ -1,14 +1,7 @@
-# ot-harjoitustyo
+### Ohjelmistotekniikka, harjoitustyö
 
-## moi 
+##Tehtävät
 
-# cute_cat.jpg
-
-*abc*
-
-_joo_
-
-__bold__
-
-_italic_
-
+#Viikko 1
+http://github.com - automatic!
+[Github](http://github.com)
