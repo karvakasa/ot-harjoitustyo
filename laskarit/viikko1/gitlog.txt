@@ -1,0 +1,45 @@
+commit aa4aa57a768cb6e5124b47e8f378e80e68753440 (HEAD -> master)
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 3 22:32:33 2020 +0200
+
+    lisäys
+
+ eka.txt    | 2 +-
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 5edbca4f0d41d4d62069f53b385c3686c9f41d8f
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 3 22:30:39 2020 +0200
+
+    tiedosto -> eka
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0eee1e5c226fa7b5f7dfc29a443a95c38bb5d345
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 3 22:29:29 2020 +0200
+
+    poistin toisen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit ca635375f415530a952f280d66e663902562527f
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 3 22:26:42 2020 +0200
+
+    muutos commit2
+
+ tiedosto.txt | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+commit b245a50ff33acf2f630b3e53440d8da55f4d4ad8
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 3 22:25:34 2020 +0200
+
+    muutos commit
+
+ tiedosto.txt | 21 ++++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
