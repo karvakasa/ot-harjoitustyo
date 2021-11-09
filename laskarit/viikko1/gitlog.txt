@@ -1,0 +1,53 @@
+
+ tiedosto.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit ff883fb0807531dab728342fec90aef0672b011f
+Author: Topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 9 16:44:26 2021 +0200
+
+    stuff lisätty
+
+ stuff/jokinTiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 1febb90fdafcca4ac9ddbd0331e90594278b1e8d
+Author: Topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 9 16:40:36 2021 +0200
+
+    toinen ja kolmas muutettu
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit f58190a95e1ae9a6c73cc6c33df17bc2917bbd4e
+Author: Topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 9 16:35:23 2021 +0200
+
+    kolmas.txt tiedosto luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 40b61151a72c7162dff3c16cf584b9efdebb35c9
+Author: Topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 9 16:31:56 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit a90243cb9eaf316b7911f2df04c3da74505378f1
+Author: Topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 9 16:29:07 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+
+
