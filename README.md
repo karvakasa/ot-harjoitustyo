@@ -1,4 +1,4 @@
 ## moikka moi otsikko
 
 *tekstiä tekstiä*
-[_Hei **Hei** hei_](guides.github.com/features/mastering-markdown/)
+[_Hei **Hei** hei_](https://guides.github.com/features/mastering-markdown/)
