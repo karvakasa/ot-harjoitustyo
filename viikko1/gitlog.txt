@@ -1,0 +1,76 @@
+totato@melkki:~/ot_viikko1/hakemisto$ git log --stat | cat
+commit cd547fae387383a2cf857bf857562493c9243952
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 4 16:48:48 2025 +0200
+
+    tehtävä 11
+
+ hakemisto/file2             | 0
+ hakemisto/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 9ab9c628d6bf05a14ec73007b86aabece1de2672
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 4 16:46:39 2025 +0200
+
+    hakemisto luotu
+
+ hakemisto/file1 | 0
+ hakemisto/file2 | 0
+ hakemisto/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 452e4b299856f5e35b99cafaa3e12c5aac91439b
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 4 16:42:28 2025 +0200
+
+    lisäyksiä
+
+ kolmas.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit a7b7e01220008c7ff2b00426d1fe6c4748e020cf
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 4 16:42:11 2025 +0200
+
+    lisäyksiä ja poistoja
+
+ eka.txt | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit c8c2fff93f9323ec800bf3e9049f67cce5d23b34
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 4 16:39:13 2025 +0200
+
+    nimen muutos tiedosto.txt -> eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 90f68c90d0b7b2e8eb23842818f1409456b74b59
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 4 16:38:16 2025 +0200
+
+    poistin toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 87fb2c3390cf894ee5c6c91569b9f784601edbe2
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 4 16:35:38 2025 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 16 ++++++++++++++++
+ toinen.txt   |  1 +
+ 2 files changed, 17 insertions(+)
+
+commit 2f62e7b84e6f3a7b9ca6cc2c5ecd1b62eae11ad8
+Author: topias <topias.tallberg@gmail.com>
+Date:   Tue Nov 4 16:32:31 2025 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
