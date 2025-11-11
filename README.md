@@ -3,7 +3,9 @@
 + [vaatimusmäärittely](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/vaatimusmaarittelu.md)
 
 ## ensimmäinen viikko done!
-   [viikko1](https://github.com/karvakasa/ot-harjoitustyo/tree/master/viikko1)
++  [gitlog.txt](https://github.com/karvakasa/ot-harjoitustyo/blob/master/viikko1/gitlog.txt)
++  [komentorivi.txt](https://github.com/karvakasa/ot-harjoitustyo/blob/master/viikko1/komentorivi.txt)
 
 ## toinen viikko done!
-   [viikko2](https://github.com/karvakasa/ot-harjoitustyo/tree/master/viikko2)
++  [maksukortti](https://github.com/karvakasa/ot-harjoitustyo/tree/master/viikko2/maksukortti)
++  [unicafe](https://github.com/karvakasa/ot-harjoitustyo/tree/master/viikko2/unicafe)
