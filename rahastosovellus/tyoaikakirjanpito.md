@@ -1,0 +1,1 @@
+1h vaatimusmäärritely ja tyoaikakirjanpito
