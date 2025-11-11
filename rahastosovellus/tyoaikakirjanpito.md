@@ -1,1 +1,1 @@
-1h vaatimusmäärritely ja tyoaikakirjanpito
++1h vaatimusmäärritely ja tyoaikakirjanpito 11.11\
