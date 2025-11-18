@@ -27,6 +27,8 @@ sequenceDiagram
     Main->>HKLLaitehallinto: rautatietori.lataa_arvoa(kallen_kortti, 3)
     HKLLaitehallinto->>Kioski: lataa_arvoa(self, kallen_kortti, 3)
     Main->>Lukijalaite: ratikka6.osta_lippu(kallen_kortti, 0)
+    Lukijalaite->>Main: True
     Main->>Lukijalaite:bussi244.osta_lippu(kallen_kortti, 2)
+    Lukijalaite->>Main: False
 
 ```
