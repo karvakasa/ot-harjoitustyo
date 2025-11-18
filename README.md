@@ -1,6 +1,6 @@
 # Minun OT-harjoitustyö
-+ [tyoaikakirjanpito](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/dokumentaatio/tyoaikakirjanpito.md)
-+ [vaatimusmäärittely](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/dokumentaatio/vaatimusmaarittelu.md)
++ [rahastosovellus](https://github.com/karvakasa/ot-harjoitustyo/tree/master/rahastosovellus)
++ [dokumentaatio](https://github.com/karvakasa/ot-harjoitustyo/tree/master/rahastosovellus/dokumentaatio)
 
 ## ensimmäinen viikko done!
 +  [gitlog.txt](https://github.com/karvakasa/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
@@ -11,3 +11,5 @@
 +  [unicafe](https://github.com/karvakasa/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe)
 
 ## kolmas viikko
++ [HSL_sequence] {https://github.com/karvakasa/ot-harjoitustyo/blob/master/laskarit/viikko3/HSL_sequence.md}
++ [monopoli] {https://github.com/karvakasa/ot-harjoitustyo/blob/master/laskarit/viikko3/monopoli.md}
