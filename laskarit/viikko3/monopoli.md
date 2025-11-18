@@ -9,9 +9,5 @@
     Ruutu "1" -- "0..8" Pelinappula
     Pelinappula "1" -- "1" Pelaaja
     Pelaaja "2..8" -- "1" Monopolipeli
-    Vankila "1" -- "1" Ruutu
-    Aloitusruutu "1" -- "1" Ruutu
-    Sattuma "1" -- "1" Ruutu
-    Yhteismaa "1" -- "1" Ruutu
-
+    Ruutu "1" -- "1" Korkeavuorenkatu : Yhteismaa
 ```
