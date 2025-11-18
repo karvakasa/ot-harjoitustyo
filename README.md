@@ -1,15 +1,33 @@
 # Minun OT-harjoitustyö
 + [rahastosovellus](https://github.com/karvakasa/ot-harjoitustyo/tree/master/rahastosovellus)
-+ [dokumentaatio](https://github.com/karvakasa/ot-harjoitustyo/tree/master/rahastosovellus/dokumentaatio)
 
-## ensimmäinen viikko done!
-+  [gitlog.txt](https://github.com/karvakasa/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-+  [komentorivi.txt](https://github.com/karvakasa/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+## Dokumentaatio
+[Vaatimusmäärittely](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/dokumentaatio/vaatimusmaarittelu.md)
++ [Työaikakirjanpito](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/dokumentaatio/tyoaikakirjanpito.md)
++ [Changelog](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/dokumentaatio/changelog.md)
 
-## toinen viikko done!
-+  [maksukortti](https://github.com/karvakasa/ot-harjoitustyo/tree/master/laskarit/viikko2/maksukortti)
-+  [unicafe](https://github.com/karvakasa/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe)
+## Asennus
 
-## kolmas viikko
-+ [HSL_sequence](https://github.com/karvakasa/ot-harjoitustyo/blob/master/laskarit/viikko3/HSL_sequence.md)
-+ [monopoli](https://github.com/karvakasa/ot-harjoitustyo/blob/master/laskarit/viikko3/monopoli.md)
+1. Asenna riippuvuudet komennolla:
+
+```bash
+poetry install
+```
+
+2. Käynnistä sovellus komennolla:
+
+```bash
+poetry run invoke start
+```
+
+## Komentorivitoiminnot
+
+1. Käynnistä sovelluksen testit komennolla:
+```bash
+poetry run invoke test
+```
+
+2. luo testikattavuus raportti komennolla:
+```bash
+poetry run invoke coverage-report
+```
