@@ -31,3 +31,8 @@ poetry run invoke test
 ```bash
 poetry run invoke coverage-report
 ```
+
+3. Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla:
+```bash
+poetry run invoke lint
+```
