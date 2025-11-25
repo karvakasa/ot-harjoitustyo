@@ -8,5 +8,6 @@ def main():
     pankki.lisaa_asiakas_rahastoon("tiia luukkonen", 500000)
     print(pankki)
 
+
 if __name__ == "__main__":
     main()

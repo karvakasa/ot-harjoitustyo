@@ -1,11 +1,13 @@
 from asiakas import Asiakas
 
+
 class Rahasto:
     def __init__(self, saldo):
-        self.saldo = saldo
+        if saldo >= 0:
+            self.saldo = saldo
 
     def lisaa_asiakas_rahastoon(self, name, maara):
-        
+
         if maara >= 0:
 
             asiakas = Asiakas(name, maara)
@@ -14,7 +16,7 @@ class Rahasto:
 
         else:
             return False
-        
+
     def __str__(self):
         saldo = self.saldo
         return f"rahastossa on {saldo/100} euroa"
