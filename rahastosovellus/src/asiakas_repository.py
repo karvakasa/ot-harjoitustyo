@@ -10,13 +10,19 @@ class AsiakasRepository:
     def find_all(self):
         return self._read()
 
-    def create(self, asiakas):
+    def create(self, henkilo):
         asiakkaat = self.find_all()
-        asiakkaat.append(asiakas)
+
+        for asiakas in asiakkaat:
+            if asiakas.name == henkilo.name:
+                print("Asiakas löytyy jo rahastosta")
+                return henkilo
+
+        asiakkaat.append(henkilo)
 
         self._write(asiakkaat)
 
-        return asiakas
+        return henkilo
 
     def _ensure_file_exists(self):
         Path(self._file_path).touch()
@@ -27,18 +33,35 @@ class AsiakasRepository:
         self._ensure_file_exists()
 
         with open(self._file_path, encoding="utf-8") as file:
-            for row in file:
-                row = row.replace("\n", "")
-                parts = row.split(";")
-
-                nimi = parts[1]
-                maara = parts[0]
+            for rivi in file:
+                rivi = rivi.replace("\n", "")
+                osa = rivi.split(",")
+                
+                nimi = osa[1]
+                maara = osa[0]
 
                 asiakkaat.append(
                     Asiakas(maara, nimi)
                 )
 
         return asiakkaat
+    
+    def count_money(self):
+        asiakkaat = self.find_all()
+        saldo = 0
+        for asiakas in asiakkaat:
+            saldo = saldo + int(asiakas.saldo)
+
+        
+        return saldo
+    
+    def add_money(self, henkilo):
+        asiakkaat = self.find_all()
+        for asiakas in asiakkaat:
+            if asiakas.name == henkilo.name:
+                asiakas.saldo = int(asiakas.saldo) + henkilo.saldo
+                break
+        self._write(asiakkaat)
 
     def _write(self, asiakkaat):
         self._ensure_file_exists()
@@ -49,6 +72,6 @@ class AsiakasRepository:
                 nimi = asiakas.name
                 maara = asiakas.saldo
 
-                row = f"{nimi};{maara}"
+                row = f"{nimi},{maara}"
 
                 file.write(row+"\n")

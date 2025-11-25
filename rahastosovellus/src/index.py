@@ -7,6 +7,9 @@ def main():
     pankki.lisaa_asiakas_rahastoon("tiia luukkonen", 500000)
     pankki.lisaa_asiakas_rahastoon("lipevä kala", 50000)
     print(pankki)
+    pankki.lisaa_saldoa_asiakkaalle("topias tallberg", 50)
+    pankki.lisaa_saldoa_asiakkaalle("tiia luukkonen", 1000000)
+    print(pankki)
 
 
 if __name__ == "__main__":
