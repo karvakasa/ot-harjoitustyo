@@ -5,6 +5,7 @@
 + [Vaatimusmäärittely](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/dokumentaatio/vaatimusmaarittelu.md)
 + [Työaikakirjanpito](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/dokumentaatio/tyoaikakirjanpito.md)
 + [Changelog](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/dokumentaatio/changelog.md)
++ [Arkkitehtuuri](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/dokumentaatio/arkkitehtuuri.md)
 
 ## Asennus
 
