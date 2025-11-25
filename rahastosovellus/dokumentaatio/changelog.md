@@ -11,3 +11,8 @@
 - sovellukseen lisätty toiminnallisuus tallentamista varten
 - sovellukseen lisätty formatointi ja pylint
 - sovellukseen lisätty testejä
+
+## viikko 5
+
+- sovellus pysyy nyt kärryillä tietopankinkanssa rahamäärästä
+- sovellukseen ei voi lisätä kuin yhden Pekka Puupaan
