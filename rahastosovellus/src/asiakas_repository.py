@@ -44,7 +44,7 @@ class AsiakasRepository:
         self._ensure_file_exists()
 
         with open(self._file_path, "w", encoding="utf-8") as file:
-            for asiakas in asiakkaat: 
+            for asiakas in asiakkaat:
 
                 nimi = asiakas.name
                 maara = asiakas.saldo

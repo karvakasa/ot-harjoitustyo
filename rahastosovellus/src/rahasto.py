@@ -1,6 +1,6 @@
-from asiakas import Asiakas
-from asiakasRepository import AsiakasRepository
 import os
+from asiakas_repository import AsiakasRepository
+from asiakas import Asiakas
 
 dirname = os.path.dirname(__file__)
 
@@ -17,7 +17,8 @@ class Rahasto:
             self.saldo = self.saldo + maara
             print(f"Asiakas {asiakas} luotu")
             asiakas = Asiakas(name=name, saldo=maara)
-            asiakas_repository = AsiakasRepository(os.path.join(dirname, "..", "data", "asiakas.csv"))
+            asiakas_repository = AsiakasRepository(
+                os.path.join(dirname, "..", "data", "asiakas.csv"))
             asiakas_repository.create(asiakas)
 
         else:
