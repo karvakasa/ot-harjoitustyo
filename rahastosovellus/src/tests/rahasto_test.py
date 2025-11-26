@@ -14,7 +14,8 @@ class TestRahasto(unittest.TestCase):
         assert pankki.saldo == 100
 
     def test_lisaa_asiakas(self):
-        self.rahasto.lisaa_asiakas_rahastoon(name="Topias Tallberg", maara=50000)
+        self.rahasto.lisaa_asiakas_rahastoon(
+            name="Topias Tallberg", maara=50000)
         self.assertEqual(str(self.rahasto), "rahastossa on 500.0 euroa")
 
     def test_lisaa_virheellinen_asiakas(self):

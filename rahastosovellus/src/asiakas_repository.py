@@ -9,16 +9,16 @@ class AsiakasRepository:
 
     def find_all(self):
         return self._read()
-    
-    def find_customer(self, name):
-            person = None
-            customers = self.find_all()
-            for customer in customers:
-                if customer.name == name:
-                    person = customer
 
-            return person
-    
+    def find_customer(self, name):
+        person = None
+        customers = self.find_all()
+        for customer in customers:
+            if customer.name == name:
+                person = customer
+
+        return person
+
     def create(self, henkilo):
         customers = self.find_all()
 
@@ -45,7 +45,7 @@ class AsiakasRepository:
             for row in file:
                 row = row.replace("\n", "")
                 parts = row.split(",")
-                
+
                 name = parts[1]
                 balance = parts[0]
 
@@ -54,7 +54,7 @@ class AsiakasRepository:
                 )
 
         return customers
-    
+
     def pay_money(self, name, amount):
         customers = self._read()
         for customer in customers:
@@ -64,7 +64,7 @@ class AsiakasRepository:
         self._write(customers)
 
         return name
-    
+
     def pay_all_money(self, name):
         customers = self._read()
         customers_without = []
@@ -78,16 +78,15 @@ class AsiakasRepository:
         self._write(customers_without)
 
         return paid_customer
-            
-    
+
     def count_money(self):
         customers = self.find_all()
         balance = 0
         for customer in customers:
             balance = balance + int(customer.balance)
-        
+
         return balance
-    
+
     def add_money(self, person):
         customers = self.find_all()
         for customer in customers:

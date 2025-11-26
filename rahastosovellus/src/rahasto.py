@@ -4,6 +4,7 @@ from asiakas import Asiakas
 
 dirname = os.path.dirname(__file__)
 
+
 class Rahasto:
     def __init__(self, balance):
         if balance >= 0:
@@ -25,10 +26,10 @@ class Rahasto:
             self.customerRepo.create(customer)
 
             self.lisaa_rahaston_saldoa(amount)
-            
+
         else:
             print("viallinen rahamäärä")
-    
+
     def maksa_asiakkaalle_rahaa(self, name, amount):
 
         if amount >= 0:
@@ -39,14 +40,14 @@ class Rahasto:
     def maksa_asiakkaalle_kaikki(self, name):
         customer = self.customerRepo.pay_all_money(name=name)
 
-        print(f"asiakkaalle {name}, on maksettu kaikki {int(customer.balance)/100} euroa")
-            
+        print(
+            f"asiakkaalle {name}, on maksettu kaikki {int(customer.balance)/100} euroa")
 
     def lisaa_rahaston_saldoa(self, amount):
         if amount >= 0:
             self.balance = self.balance + amount
             print(f"rahastoon lisätty {amount/100} euroa")
-        
+
         else:
             print("viallinen rahamäärä")
 
