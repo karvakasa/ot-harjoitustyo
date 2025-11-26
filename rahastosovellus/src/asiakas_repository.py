@@ -11,16 +11,16 @@ class AsiakasRepository:
         return self._read()
 
     def create(self, henkilo):
-        asiakkaat = self.find_all()
+        customers = self.find_all()
 
-        for asiakas in asiakkaat:
-            if asiakas.name == henkilo.name:
+        for customer in customers:
+            if customer.name == henkilo.name:
                 print("Asiakas löytyy jo rahastosta")
                 return henkilo
 
-        asiakkaat.append(henkilo)
+        customers.append(henkilo)
 
-        self._write(asiakkaat)
+        self._write(customers)
 
         return henkilo
 
@@ -28,50 +28,50 @@ class AsiakasRepository:
         Path(self._file_path).touch()
 
     def _read(self):
-        asiakkaat = []
+        customers = []
 
         self._ensure_file_exists()
 
         with open(self._file_path, encoding="utf-8") as file:
-            for rivi in file:
-                rivi = rivi.replace("\n", "")
-                osa = rivi.split(",")
+            for row in file:
+                row = row.replace("\n", "")
+                parts = row.split(",")
                 
-                nimi = osa[1]
-                maara = osa[0]
+                name = parts[1]
+                balance = parts[0]
 
-                asiakkaat.append(
-                    Asiakas(maara, nimi)
+                customers.append(
+                    Asiakas(balance, name)
                 )
 
-        return asiakkaat
+        return customers
     
     def count_money(self):
-        asiakkaat = self.find_all()
-        saldo = 0
-        for asiakas in asiakkaat:
-            saldo = saldo + int(asiakas.saldo)
+        customers = self.find_all()
+        balance = 0
+        for customer in customers:
+            balance = balance + int(customer.balance)
 
         
-        return saldo
+        return balance
     
-    def add_money(self, henkilo):
-        asiakkaat = self.find_all()
-        for asiakas in asiakkaat:
-            if asiakas.name == henkilo.name:
-                asiakas.saldo = int(asiakas.saldo) + henkilo.saldo
+    def add_money(self, person):
+        customers = self.find_all()
+        for customer in customers:
+            if customer.name == person.name:
+                customer.balance = int(customer.balance) + person.balance
                 break
-        self._write(asiakkaat)
+        self._write(customers)
 
-    def _write(self, asiakkaat):
+    def _write(self, customers):
         self._ensure_file_exists()
 
         with open(self._file_path, "w", encoding="utf-8") as file:
-            for asiakas in asiakkaat:
+            for customer in customers:
 
-                nimi = asiakas.name
-                maara = asiakas.saldo
+                name = customer.name
+                amount = customer.balance
 
-                row = f"{nimi},{maara}"
+                row = f"{name},{amount}"
 
                 file.write(row+"\n")
