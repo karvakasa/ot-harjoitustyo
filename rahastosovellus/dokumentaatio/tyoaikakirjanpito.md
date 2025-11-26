@@ -3,6 +3,6 @@
 + 1h sovelluksen ensimmäisten testien luonti ja coveragen asennus 18.11
 + 1h changelog, invoke, .coveragerc muutokset + muu varmistus 18.11
 + 3h csv lisääminen ja toiminnallisuuden opettelua 25.11
-+ 2h asiakasrepon korjailua 26.11
++ 3h asiakasrepon korjailua 26.11
 
-+ yhteensä = 7h
++ yhteensä = 10h

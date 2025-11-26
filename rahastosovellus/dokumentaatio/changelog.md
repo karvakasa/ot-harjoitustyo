@@ -16,3 +16,4 @@
 
 - sovellus pysyy nyt kärryillä tietopankinkanssa rahamäärästä
 - sovellukseen ei voi lisätä kuin yhden Pekka Puupaan
+- sovelluksessa voi maksaa asiakkaalle osan tai kaikki
