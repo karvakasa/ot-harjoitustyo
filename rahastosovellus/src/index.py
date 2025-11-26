@@ -8,7 +8,10 @@ def main():
     pankki.lisaa_asiakas_rahastoon("lipevä kala", 50000)
     print(pankki)
     pankki.lisaa_saldoa_asiakkaalle("topias tallberg", 50)
-    pankki.lisaa_saldoa_asiakkaalle("tiia luukkonen", 1000000)
+    pankki.lisaa_saldoa_asiakkaalle("tiia luukkonen", 500000)
+    print(pankki)
+    pankki.maksa_asiakkaalle_rahaa("tiia luukkonen", 500000)
+    pankki.maksa_asiakkaalle_kaikki("topias tallberg")
     print(pankki)
 
 
