@@ -5,5 +5,6 @@
 + 3h csv lisääminen ja toiminnallisuuden opettelua 25.11
 + 3h asiakasrepon korjailua 26.11
 + 1h suunnittelua, formatointia, ihmettelyä 26.11
++ 8h refactorointia, uutta toiminnallisuutta ja testejä 2.12
 
-+ yhteensä = 11h
++ yhteensä = 19h

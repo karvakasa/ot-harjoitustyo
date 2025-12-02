@@ -22,4 +22,5 @@
 - sovellukseen lisätty entities, repositories, services hakemistot
 - linttaus nyt toimii
 - pakkauskaavio lisätty
-- sovelluslogiikka nyt erillään 
+- sovelluslogiikka nyt erillään
+- testejä lisää

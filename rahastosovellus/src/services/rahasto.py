@@ -15,6 +15,7 @@ class Rahasto:
         else:
             print("viallinen rahamäärä")
 
+
     def lisaa_asiakas_rahastoon(self, name, amount):
 
         if amount >= 0:
@@ -25,7 +26,9 @@ class Rahasto:
             self.muuta_rahaston_saldoa(amount)
 
         else:
-            print("viallinen rahamäärä")
+            return "viallinen rahamäärä"
+
+        return f"asiakas: {name} lisätty rahastoon"
 
     def maksa_asiakkaalle_rahaa(self, name, amount):
 
@@ -34,18 +37,24 @@ class Rahasto:
 
             print(f"rahat on siirretty {name}")
 
+        else:
+            return "viallinen rahamäärä"
+
+        return f"asiakkaalle {name} maksettu {amount}"
+
     def maksa_asiakkaalle_kaikki(self, name):
         customer = self.customerrepo.pay_all_money(name=name)
-        print(
-            f"asiakkaalle {name}, on maksettu kaikki {float(customer.balance)/100} euroa")
+        return f"asiakkaalle {name}, on maksettu kaikki {
+            float(customer.balance) / 100} euroa"
 
     def muuta_rahaston_saldoa(self, amount):
         if amount >= 0:
             self.balance = self.balance + amount
-            print(f"rahastoon lisätty {amount/100} euroa")
 
         else:
-            print("viallinen rahamäärä")
+            return "viallinen rahamäärä"
+
+        return f"rahastoon lisätty {amount/100} euroa"
 
     def paljonko_rahaa_rahastossa(self):
         balance = self.customerrepo.count_money()
@@ -60,7 +69,9 @@ class Rahasto:
             self.muuta_rahaston_saldoa(amount)
 
         else:
-            print("viallinen rahamäärä")
+            return "viallinen rahamäärä"
+
+        return f"asiakkaan saldoa muutettu, +{amount}"
 
     def nayta_asiakkaat_ja_varat(self):
         customers = self.customerrepo.find_all()
@@ -77,7 +88,7 @@ class Rahasto:
             self.customerrepo.add_money(fund)
 
 
-        print("rahaston omia varoja lisätty: ", amount)
+        return f"rahaston omia varoja lisätty: {amount}"
 
     def pyorita_vuosi_rahastoa(self):
         customers = self.customerrepo.find_all()
@@ -85,8 +96,9 @@ class Rahasto:
             newbalance = float(customer.balance) * 0.07
             self.muuta_asiakkaan_saldo(customer.name, newbalance)
 
-
         self.ota_vuosimaksu()
+
+        return "vuosi mennyt"
 
     def ota_vuosimaksu(self):
 
@@ -100,8 +112,12 @@ class Rahasto:
             newbalance = float(customer.balance) - maksu
             self.muuta_asiakkaan_saldo(customer.name, newbalance)
 
+        return "vuosimaksu otettu"
+
     def poista_rahasto(self):
         self.customerrepo.delete_fund()
+
+        return "rahasto nollattu"
 
     def __str__(self):
         balance = self.paljonko_rahaa_rahastossa()
