@@ -1,19 +1,22 @@
-from rahasto import Rahasto
+from services.rahasto import Rahasto
 
 
 def main():
     print("hello world!")
     pankki = Rahasto(0)
-    pankki.lisaa_asiakas_rahastoon("topias tallberg", 100000)
-    pankki.lisaa_asiakas_rahastoon("tiia luukkonen", 500000)
-    pankki.lisaa_asiakas_rahastoon("lipevä kala", 50000)
+    pankki.nayta_asiakkaat_ja_varat()
+    pankki.lisaa_asiakas_rahastoon("topias tumpelo", 100000)
+    pankki.lisaa_asiakas_rahastoon("tiia luulonen", 500000)
     print(pankki)
-    pankki.lisaa_saldoa_asiakkaalle("topias tallberg", 50)
-    pankki.lisaa_saldoa_asiakkaalle("tiia luukkonen", 600000)
+    pankki.muuta_asiakkaan_saldo("tiia luulonen", 500000)
+    pankki.pyorita_vuosi_rahastoa()
     print(pankki)
-    pankki.maksa_asiakkaalle_rahaa("tiia luukkonen", 500000)
-    pankki.maksa_asiakkaalle_kaikki("topias tallberg")
+    pankki.maksa_asiakkaalle_rahaa("tiia luulonen", 500000)
     print(pankki)
+    pankki.maksa_asiakkaalle_kaikki("topias tumpelo")
+    pankki.maksa_asiakkaalle_kaikki("tiia luulonen")
+    print(pankki)
+    pankki.nayta_asiakkaat_ja_varat()
 
 
 if __name__ == "__main__":

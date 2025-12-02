@@ -4,5 +4,6 @@
 + 1h changelog, invoke, .coveragerc muutokset + muu varmistus 18.11
 + 3h csv lisääminen ja toiminnallisuuden opettelua 25.11
 + 3h asiakasrepon korjailua 26.11
++ 1h suunnittelua, formatointia, ihmettelyä 26.11
 
-+ yhteensä = 10h
++ yhteensä = 11h

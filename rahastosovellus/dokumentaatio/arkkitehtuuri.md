@@ -1,7 +1,10 @@
 ```mermaid
 
   flowchart TD
-    Ui --> Entities
+    Ui --> Services
+    Services --> Entities
+    Services --> Repositories
     Entities --> Repositories
+    Repositories --> Entities
 
 ```

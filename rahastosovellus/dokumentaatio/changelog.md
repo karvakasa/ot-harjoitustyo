@@ -17,3 +17,8 @@
 - sovellus pysyy nyt kärryillä tietopankinkanssa rahamäärästä
 - sovellukseen ei voi lisätä kuin yhden Pekka Puupaan
 - sovelluksessa voi maksaa asiakkaalle osan tai kaikki
+- sovelluksessa voi nyt pyörittää vuoden.
+- vuosituotto nyt 7%
+- sovellukseen lisätty entities, repositories, services hakemistot
+- linttaus nyt toimii
+- pakkauskaavio lisätty

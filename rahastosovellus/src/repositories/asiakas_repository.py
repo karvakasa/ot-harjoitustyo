@@ -1,5 +1,5 @@
 from pathlib import Path
-from asiakas import Asiakas
+from entities.asiakas import Asiakas
 
 
 class AsiakasRepository:
@@ -43,15 +43,16 @@ class AsiakasRepository:
 
         with open(self._file_path, encoding="utf-8") as file:
             for row in file:
-                row = row.replace("\n", "")
-                parts = row.split(",")
+                if len(row) == 0:
+                    print("rahasto on tyhjä")
+                else:
+                    row = row.replace("\n", "")
+                    parts = row.split(",")
 
-                name = parts[1]
-                balance = parts[0]
+                    name = parts[0]
+                    balance = parts[1]
 
-                customers.append(
-                    Asiakas(balance, name)
-                )
+                    customers.append(Asiakas(name, balance))
 
         return customers
 
@@ -59,7 +60,7 @@ class AsiakasRepository:
         customers = self._read()
         for customer in customers:
             if customer.name == name:
-                customer.balance = int(customer.balance) - amount
+                customer.balance = float(customer.balance) - amount
                 break
         self._write(customers)
 
@@ -83,7 +84,7 @@ class AsiakasRepository:
         customers = self.find_all()
         balance = 0
         for customer in customers:
-            balance = balance + int(customer.balance)
+            balance = balance + float(customer.balance)
 
         return balance
 
@@ -91,7 +92,7 @@ class AsiakasRepository:
         customers = self.find_all()
         for customer in customers:
             if customer.name == person.name:
-                customer.balance = int(customer.balance) + person.balance
+                customer.balance = float(customer.balance) + person.balance
                 break
         self._write(customers)
 
@@ -111,3 +112,9 @@ class AsiakasRepository:
                 file.write(row+"\n")
 
         return customers
+
+    def delete_fund(self):
+        with open(self._file_path, "w", encoding="utf-8") as file:
+            file.close()
+
+        print("rahasto tyhjennetty")
