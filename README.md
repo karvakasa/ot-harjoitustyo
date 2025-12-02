@@ -1,5 +1,6 @@
-# Minun OT-harjoitustyö
+# RahastoSovellus
 + [rahastosovellus](https://github.com/karvakasa/ot-harjoitustyo/tree/master/rahastosovellus)
+rahastonhoitajan sovellus, sovelluksen avulla rahastonhoitaja voi lisätä ja poistaa asiakkaita. maksaa osittain tai kokonaan asiakkaalle. Sovellus myös laskee vuosittaisien tuoton ja ottaa rahastonhoitajan osuuden tuotoista ja kokonais rahastonkoosta vuosittain. 
 
 ## Dokumentaatio
 + [Vaatimusmäärittely](https://github.com/karvakasa/ot-harjoitustyo/blob/master/rahastosovellus/dokumentaatio/vaatimusmaarittelu.md)
@@ -13,6 +14,10 @@
 
 ```bash
 poetry install
+```
+
+```bash
+poetry run invoke build
 ```
 
 2. Käynnistä sovellus komennolla:
@@ -36,4 +41,9 @@ poetry run invoke coverage-report
 3. Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla:
 ```bash
 poetry run invoke lint
+```
+
+4. tiedoston formatointi
+```bash
+poetry run invoke format
 ```
