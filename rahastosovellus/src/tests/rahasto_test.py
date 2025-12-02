@@ -29,11 +29,14 @@ class TestRahasto(unittest.TestCase):
         self.assertEqual(str(self.rahasto), "rahastossa on 0.0 euroa")
 
     def test_maksa_asiakkaalle_rahaa(self):
-        self.rahasto.lisaa_asiakas_rahastoon(name="topias testinen", amount=5000)
+        self.rahasto.lisaa_asiakas_rahastoon(
+            name="topias testinen", amount=5000)
         self.rahasto.maksa_asiakkaalle_rahaa("topias testinen", 5000)
-        self.assertRaises(Exception, "asiakkaalle topias testinen, on maksettu kaikki 500.0 euroa")
+        self.assertRaises(
+            Exception, "asiakkaalle topias testinen, on maksettu kaikki 500.0 euroa")
 
     def test_maksa_asiakkaalle_virheellinen_rahaa(self):
-        self.rahasto.lisaa_asiakas_rahastoon(name="topias testinen", amount=5000)
+        self.rahasto.lisaa_asiakas_rahastoon(
+            name="topias testinen", amount=5000)
         self.rahasto.maksa_asiakkaalle_rahaa("topias testinen", -5000)
         self.assertRaises(Exception, "viallinen rahamäärä")

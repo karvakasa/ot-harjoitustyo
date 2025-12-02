@@ -5,6 +5,7 @@ from repositories.asiakas_repository import AsiakasRepository
 clientdir = os.path.dirname(__file__)
 clientHistorydir = os.path.dirname(__file__)
 
+
 class Rahasto:
     def __init__(self, balance):
         if balance >= 0:
@@ -14,7 +15,6 @@ class Rahasto:
 
         else:
             print("viallinen rahamäärä")
-
 
     def lisaa_asiakas_rahastoon(self, name, amount):
 
@@ -76,8 +76,8 @@ class Rahasto:
     def nayta_asiakkaat_ja_varat(self):
         customers = self.customerrepo.find_all()
         for customer in customers:
-            print("asiakas:",customer.name,
-            ", varat:",float(customer.balance) / 100, "euroa.")
+            print("asiakas:", customer.name,
+                  ", varat:", float(customer.balance) / 100, "euroa.")
 
     def lisaa_rahaston_omiavaroja(self, amount):
         fund = Asiakas("rahaston omat", amount)
@@ -86,7 +86,6 @@ class Rahasto:
             self.customerrepo.create(fund)
         else:
             self.customerrepo.add_money(fund)
-
 
         return f"rahaston omia varoja lisätty: {amount}"
 
