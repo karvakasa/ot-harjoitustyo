@@ -5,12 +5,15 @@ from entities.asiakas import Asiakas
 class AsiakasRepository:
 
     def __init__(self, file_path):
+        """finding file path for data saving"""
         self._file_path = file_path
 
     def find_all(self):
+        """"print all data from file path"""
         return self._read()
 
     def find_customer(self, name):
+        """print certain person from data file"""
         person = None
         customers = self.find_all()
         for customer in customers:
@@ -20,6 +23,7 @@ class AsiakasRepository:
         return person
 
     def create(self, henkilo):
+        """creating non used customer name to fund"""
         customers = self.find_all()
 
         for customer in customers:
@@ -34,9 +38,12 @@ class AsiakasRepository:
         return henkilo
 
     def _ensure_file_exists(self):
+        """self check for integrity of file path"""
         Path(self._file_path).touch()
 
     def _read(self):
+        """reading data file and splitting data to list with [name,balance]
+        "," is the divider of the data. and returning entire list"""
         customers = []
 
         self._ensure_file_exists()
@@ -57,6 +64,11 @@ class AsiakasRepository:
         return customers
 
     def pay_money(self, name, amount):
+        """"reduce certain customer balance
+        Args: 
+            name: customer name who we pay
+            amount: amount we pay to certain name
+        """
         customers = self._read()
         for customer in customers:
             if customer.name == name:
@@ -67,6 +79,10 @@ class AsiakasRepository:
         return name
 
     def pay_all_money(self, name):
+        """"remove certain customer from fund after paying his entire balance
+        Args: 
+            name: customer name
+        """
         customers = self._read()
         customers_without = []
         paid_customer = None
@@ -81,6 +97,7 @@ class AsiakasRepository:
         return paid_customer
 
     def count_money(self):
+        """count funds total balance"""
         customers = self.find_all()
         balance = 0
         for customer in customers:
@@ -89,6 +106,10 @@ class AsiakasRepository:
         return balance
 
     def add_money(self, person):
+        """adding balance for exisiting customer
+        Args: 
+            person: name, balance
+        """
         customers = self.find_all()
         for customer in customers:
             if customer.name == person.name:
@@ -98,7 +119,21 @@ class AsiakasRepository:
 
         return person
 
+    def _read_raw(self):
+        rows = []
+        self._ensure_file_exists()
+
+        with open(self._file_path, encoding="utf-8") as file:
+            for row in file:
+                rows.append(row)
+
+        return rows
+
     def _write(self, customers):
+        """write certain customer to data file
+        Args: 
+            list[customer], customer:name, balance
+        """
         self._ensure_file_exists()
 
         with open(self._file_path, "w", encoding="utf-8") as file:
@@ -114,6 +149,7 @@ class AsiakasRepository:
         return customers
 
     def delete_fund(self):
+        """delete entire fund and data"""
         with open(self._file_path, "w", encoding="utf-8") as file:
             file.close()
 

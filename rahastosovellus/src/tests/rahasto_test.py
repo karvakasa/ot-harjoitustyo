@@ -24,6 +24,25 @@ class TestRahasto(unittest.TestCase):
             name="topias tumpelo", amount=50000)
         self.assertEqual(str(self.rahasto), "rahastossa on 500.0 euroa")
 
+    def test_maksa_kaikki_rahat_asiakkaalle(self):
+        self.rahasto.lisaa_asiakas_rahastoon(
+            name="testi testinen", amount=1000)
+        self.assertEqual(self.rahasto.maksa_asiakkaalle_kaikki(name="testi testinen"),
+                         "asiakkaalle testi testinen, on maksettu kaikki 10.0 euroa")
+
+    def test_muuta_virheellisesti_rahaston_saldoa(self):
+        self.assertEqual(self.rahasto.muuta_rahaston_saldoa(
+            amount=-5), "viallinen rahamäärä")
+
+    def test_muuta_asiakkaan_saldoa(self):
+        self.rahasto.lisaa_asiakas_rahastoon(name="titti tetti", amount=5000)
+        self.assertEqual(self.rahasto.muuta_asiakkaan_saldo(
+            name="titti tetti", amount=5000), "asiakkalle: titti tetti, lisätty: 5000 saldoa")
+
+    def test_muuta_asiakkaan_saldoa_virheellisesti(self):
+        self.assertEqual(self.rahasto.muuta_asiakkaan_saldo(
+            name="titti tetti", amount=-5), "viallinen rahamäärä")
+
     def test_lisaa_virheellinen_asiakas(self):
         self.rahasto.lisaa_asiakas_rahastoon(name="Topias vääränen", amount=-5)
         self.assertEqual(str(self.rahasto), "rahastossa on 0.0 euroa")

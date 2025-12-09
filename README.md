@@ -16,10 +16,6 @@ rahastonhoitajan sovellus, sovelluksen avulla rahastonhoitaja voi lisätä ja po
 poetry install
 ```
 
-```bash
-poetry run invoke build
-```
-
 2. Käynnistä sovellus komennolla:
 
 ```bash

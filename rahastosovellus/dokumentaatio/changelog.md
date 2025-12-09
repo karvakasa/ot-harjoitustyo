@@ -24,3 +24,8 @@
 - pakkauskaavio lisätty
 - sovelluslogiikka nyt erillään
 - testejä lisää
+
+## viikko 6
+
+- sovellukseen lisätty docstring rahasto serviceen ja rahastorepoon
+- sovellus nyt tallentaa viime vuosien tilitiedot vuoden päätteeksi
