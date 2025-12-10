@@ -56,10 +56,9 @@ class AsiakasRepository:
                     row = row.replace("\n", "")
                     parts = row.split(",")
 
-                    name = parts[0]
-                    balance = parts[1]
-
-                    customers.append(Asiakas(name, balance))
+                    if len(parts) == 2:
+                        name, balance = parts
+                        customers.append(Asiakas(name, balance))
 
         return customers
 

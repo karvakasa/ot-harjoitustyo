@@ -18,11 +18,11 @@ class AsiakasHistoriaRepository:
 
         try:
             with open(self._file_path, "r", encoding="utf-8") as f:
-                lines = f.readlines()
+                rows = f.readlines()
                 last_year = -1
-                for line in (lines):
-                    if line.lower().startswith("vuosi:"):
-                        last_year = int(line.strip().split(":")[1])
+                for row in (rows):
+                    if row.lower().startswith("vuosi:"):
+                        last_year = int(row.strip().split(":")[1])
 
                 next_year = last_year + 1
         except FileNotFoundError:
