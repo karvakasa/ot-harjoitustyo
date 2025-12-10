@@ -6,10 +6,6 @@ historydir = os.path.dirname(__file__)
 
 class Historia:
     def __init__(self):
-        """crete balance for fund and find file from filepath
-        Args: 
-            balance: how much is the starting balance of fund
-        """
         self.customerhistoryrepo = AsiakasHistoriaRepository(
             os.path.join(historydir, "../../", "data", "asiakashistoria.csv"))
 

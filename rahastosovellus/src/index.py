@@ -7,7 +7,6 @@ def main():
     pankki.lisaa_asiakas_rahastoon("topias tumpelo", 100000)
     pankki.lisaa_asiakas_rahastoon("tiia luulonen", 500000)
     pankki.nayta_asiakkaat_ja_varat()
-    print(pankki)
     pankki.muuta_asiakkaan_saldo("tiia luulonen", 500000)
     pankki.maksa_asiakkaalle_kaikki("topias tumpelo")
     pankki.pyorita_vuosi_rahastoa()

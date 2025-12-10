@@ -52,7 +52,7 @@ class Rahasto:
         else:
             return "viallinen rahamäärä"
 
-        return f"asiakkaalle {name} maksettu {amount}"
+        return f"asiakkaalle {name} on maksettu {float(amount) / 100} euroa"
 
     def maksa_asiakkaalle_kaikki(self, name):
         """paying entire investment to customer
@@ -102,8 +102,10 @@ class Rahasto:
         """return entire list of customers with their funds"""
         customers = self.customerrepo.find_all()
         for customer in customers:
-            print("asiakas:", customer.name,
-                  ", varat:", float(customer.balance) / 100, "euroa.")
+            print("asiakas:", customer.name, ", varat:",
+                  float(customer.balance) / 100, "euroa.")
+
+        return f"rahastossa on {float(self.balance) / 100} euroa"
 
     def lisaa_rahaston_omiavaroja(self, amount):
         """add balance to funds personal funds
@@ -117,7 +119,7 @@ class Rahasto:
         else:
             self.customerrepo.add_money(fund)
 
-        return f"rahaston omia varoja lisätty: {amount}"
+        return f"rahaston omia varoja lisätty: {float(amount / 100)} euroa"
 
     def pyorita_vuosi_rahastoa(self):
         """this method mimics year cycle where fund gains 7% profit,

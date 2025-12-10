@@ -9,5 +9,6 @@
 + 1h docstring rahasto ja rahastorepo 9.12
 + 6h asiakas historia tallennus toimimaan 9.12 
 + 2h testejä, github release, korjasin lint warnings  9.12
++ 2h lisää testejä ja vanhojen testien korjaamista 10.12
 
 + yhteensä = 28h
